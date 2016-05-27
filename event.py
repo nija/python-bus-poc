@@ -1,12 +1,14 @@
 class Event():
-    
+    '''Event class'''
+
     class Types():
+        '''Types of event classes'''
         message_created_event = "MESSAGE_CREATED_EVENT"
-        user_joins_room = "USER_JOINS_ROOM"
+        user_joins_room = "USER_JOINS_ROOM_EVENT"
     
-    def __init__(self, type, data):
+    def __init__(self, event_type, data):
         self.data = data
-        self.type = type
+        self.type = event_type
         
     def get_data(self):
         return self.data
